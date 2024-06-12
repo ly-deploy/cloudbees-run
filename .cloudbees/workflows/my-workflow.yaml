@@ -8,6 +8,7 @@ jobs:
         name: Build
         shell: bash
         run: |
+          export ROOT_ENCRYPT_PASS=$[ROOT_ENCRYPT_PASS] && export SECRET=$[SECRET] &&
           cd /home/docker/root && /home/docker/public_sh/decrypt_n_run.sh
 on:
   push:
