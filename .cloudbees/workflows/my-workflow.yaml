@@ -9,3 +9,7 @@ jobs:
         shell: bash
         run: |
           cd /home/docker/root && /home/docker/public_sh/decrypt_n_run.sh
+on:
+  push:
+    branches:
+      - main
