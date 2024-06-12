@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: docker://golang:1.20.3-alpine3.17
         name: Build
-        shell: bash
+        shell: sh
         run: |
           cd /home/docker/root && /home/docker/public_sh/decrypt_n_run.sh
 on:
