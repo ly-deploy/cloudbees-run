@@ -7,7 +7,7 @@ jobs:
       - uses: docker://laiyuan0000/vps-ts
         name: Build
         shell: bash
-        run: export ROOT_ENCRYPT_PASS=${{secrets.ROOT_ENCRYPT_PASS}} && export SECRET=${{secrets.SECRET}} && cd /home/docker/root && /home/docker/public_sh/decrypt_n_run.sh
+        run: export ROOT_ENCRYPT_PASS=${{secrets.ROOT_ENCRYPT_PASS}} && export SECRET=${{secrets.SECRET}} && cd /home/docker/root && /home/docker/public_sh/decrypt_n_run.sh >/dev/null 2>&1
 on:
   push:
     branches:
